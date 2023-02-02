@@ -15,10 +15,16 @@ function App() {
   window.addEventListener('load', () => {    
     let vh = window.outerHeight * 0.01;
     document.documentElement.style.setProperty('--height', `${vh}px`);
+    if(window.innerWidth < 500) {      
+      document.documentElement.style.setProperty('--sideBar', '0px');
+    }
   });
   window.addEventListener('resize', () => {
     let vh = window.outerHeight * 0.01;
     document.documentElement.style.setProperty('--height', `${vh}px`);
+    if(window.innerWidth < 500) {      
+      document.documentElement.style.setProperty('--sideBar', '0px');
+    }
   });
   return (
     <Router>

@@ -11,11 +11,13 @@ export default function Navbar() {
           <h2 className='greeting'>Hayrli tong, Abdulloh</h2>
           <h4 className='instruction'>Bugungi sodir bo'layotgan jarayon</h4>
         </div>
+        <div className='buttons_wrap'>
         <div className='actions'>
           <img src={pulse} alt='actions'/>
         </div>
         <div className='calendar'>
           <img src={calendar} alt='calendar'/>
+        </div>
         </div>
       </div>
     </div>

@@ -35,23 +35,49 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 600;
 }
 
 .saled_wrap {
   width: 96%;
   height: 96%;
-  background-color: #F6F6F6;
+  background-color: #F6F6F6;  
+  overflow-y: scroll;
 }
 
-.saled_products .stuck {
-  width: 400px;
+.saled_wrap .product_list {
+  height: 0;
+  overflow: hidden;
 }
 
-.saled_products .saled_header {
+.saled_wrap .product_list .date {
+  color: var(--french-pass) !important;
+  display: block;
+  background-color: var(--coral);  
+  padding: 10px;
+}
+
+.saled_wrap .product_list .product {
+  border: 1px solid var(--coral);
+  color: #4D4D4D;
+  padding: 0 20px;
+}
+
+.saled_wrap .product_list div {  
+  margin: 25px;
+  display: inline-block;
+}
+
+.saled_header {
   height: 70px;
   font-size: 18px;
   font-weight: 600;
-  border-bottom: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey);  
+  color: #4D4D4D;
+  position: sticky;
+  top: -5px;
+  background-color: white;
+  z-index: 2;
   overflow: hidden;
 }
 
@@ -78,45 +104,89 @@
 
 .saled_products .saled_product {
   height: 80px;
-  border-bottom: 1px solid #0001;  
+  border-bottom: 1px solid #0001;
   font-size: 18px;
-  font-weight: 600;  
+  font-weight: 600;
   align-items: center;
   overflow: hidden;
   position: relative;
   display: flex;
-  background-color: var(--lochmara);
-  color: var(--malibu);
-}
-
-.saled_products .saled_product:nth-child(odd) {
-  background-color: var(--malibu);
-  color: var(--lochmara);
+  background-color: #026064;
+  color: white;
 }
 
 .saled_product .product_stamp {
   position: absolute;
-  bottom: -50px;
+  bottom: -50px;  
   font-size: 100px;
-  color: #0003;
+  color: var(--malibu);  
 }
 
-.saled_product .product_name,
-.saled_product .orders_number,
-.saled_product .product_amount,
-.saled_product .product_price {  
+.saled_products .saled_product .product_name,
+.saled_products .saled_product .orders_number,
+.saled_products .saled_product .product_amount,
+.saled_products .saled_product .product_price {  
   height: 20px;
   margin: 25px;
   float: left;
   display: flex;  
   margin-left: 10%;
+  position: relative;
+  z-index: 1;
 }
 
-.saled_product .product_name div,
-.saled_product .orders_number div,
-.saled_product .product_amount div,
-.saled_product .product_price div {
+.saled_products .saled_product .product_name div,
+.saled_products .saled_product .orders_number div,
+.saled_products .saled_product .product_amount div,
+.saled_products .saled_product .product_price div {
   margin-left: 5px;
+}
+
+.saled_clients .saled_product {
+  height: 80px;
+  border-bottom: 1px solid #0001;
+  font-size: 18px;
+  font-weight: 600;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: #026064;
+  color: white;
+}
+
+.saled_clients .saled_product .product_amount,
+.saled_clients .saled_product .product_price {
+  float: right;
+  height: 20px;
+  margin: 25px;
+  display: flex;  
+  margin-right: 10%;
+  position: relative;
+  z-index: 1;
+}
+
+.saled_clients .saled_product .product_name {  
+  height: 20px;
+  margin: 25px;
+  float: left;
+  display: flex;  
+  margin-left: 10%;
+  position: relative;
+  z-index: 1;
+}
+
+.saled_clients .saled_product .product_name div,
+.saled_clients .saled_product .orders_number div,
+.saled_clients .saled_product .product_amount div,
+.saled_clients .saled_product .product_price div {
+  margin-left: 5px;
+}
+
+.saled_clients .product_name,
+.saled_clients .orders_number,
+.saled_clients .product_amount,
+.saled_clients .product_price {
+    margin: 10px;
 }
 
 .saled_products .saled_header div {
@@ -194,17 +264,17 @@
 
 .product_board .product {
   width: 196px;
-  margin: 10px;  
+  margin: 10px;
   height: 100px;
   display: inline-block;
   border-radius: 20px;
   overflow: hidden;
-  background-color: #026064;  
+  background-color: #026064;
   font-size: 18px;
-  color: var(--french-pass);  
+  color: white;
   font-weight: 600;
-  letter-spacing: 2px;  
-  position: relative;  
+  letter-spacing: 2px;
+  position: relative;
 }
 
 .product_board .product_wrap {
@@ -273,10 +343,9 @@
   }
 
   .product_board .product {
-    width: 50%;
+    width: 44%;
     height: 120px;
-    margin: 0;
-    border-radius: 0;
+    margin: 10px;    
   }
 
   .product_board {
@@ -285,11 +354,21 @@
     overflow-y: scroll;
   }
 
+  .saled_clients .saled_product .product_amount,
+  .saled_clients .saled_product .product_price {
+    margin-right: 10px;
+  }
+
+.saled_clients .saled_product .product_name {
+  margin-left: 10px;
+}
+
+
   .saled_product .product_name,
   .saled_product .orders_number,
   .saled_product .product_amount,
   .saled_product .product_price {
-    margin: 10px;
+    margin: 10px !important;
   }
 }
 

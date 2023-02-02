@@ -10,7 +10,7 @@ export default function Header() {
   const [full, setFull] = useState(false);
   
   const openMenu = () => {
-    let sideBar = !menu? 320:100;
+    let sideBar = window.innerWidth < 500? !menu? window.innerWidth: 0:!menu? 320:100;
     document.documentElement.style.setProperty('--sideBar', `${sideBar}px`);
   }
 
@@ -37,7 +37,7 @@ export default function Header() {
 
   return (
     <div className='header'>
-      <div className='header_wrap'>
+      <div className='header_wrap'>        
         <div className='menu_button' onClick={() => {
           dispatch({
             type: 'OPEN_MENU',

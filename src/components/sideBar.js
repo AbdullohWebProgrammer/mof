@@ -4,13 +4,25 @@ import logo from '../resources/logo.svg';
 import dashboard from '../resources/dashboard.svg';
 import shopping from '../resources/shopping.svg';
 import storage from '../resources/storage.svg';
+import rightarrow from '../resources/rightarrow.svg';
 import { useStateValue } from '../StateProvider';
 
 export default function SideBar() {
-  const [{ menu }] = useStateValue();  
+  const [{ menu }, dispatch] = useStateValue();  
+
+  const openMenu = () => {
+    let sideBar = window.innerWidth < 500? !menu? window.innerWidth: 0:!menu? 320:100;
+    document.documentElement.style.setProperty('--sideBar', `${sideBar}px`);
+    dispatch({
+      type: 'OPEN_MENU',
+      item: !menu
+    });
+  }
+
   return (
     <div className='sideBar'>
       <div className='wrap'>
+        <img className='closer' onClick={() => openMenu()} src={rightarrow} alt='rightarrow'/>
         <img className='logo' src={logo} width='80px' alt='logo'/>
         <div class="title-wrapper">
           <h1 class="sweet-title">

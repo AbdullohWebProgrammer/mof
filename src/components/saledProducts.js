@@ -4,13 +4,13 @@ export default function SaledProducts() {
   return (
     <div className='saled_products'>
       <div className='saled_wrap'>
-        <div className='saled_header text_111111'>
+        <div className='saled_header'>
           <div className='card_name'>Mahsulotlar</div>
           <div className='types_number'>
             <div>
               140
             </div>
-            <div className='text_026064'>
+            <div className='text_BCBCBC'>
               toifa
             </div>
           </div>
