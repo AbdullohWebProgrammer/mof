@@ -1,0 +1,12 @@
+.shopping {    
+    float: left;
+    width: calc(100% - var(--sideBar));
+    height: 100vh;    
+    transition: .3s ease-in-out;
+}
+
+@media screen and (max-width: 700px) {
+    .shopping {
+        width: 100%;
+    }
+}

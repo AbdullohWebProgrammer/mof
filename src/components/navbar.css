@@ -1,0 +1,62 @@
+.navbar {
+    width: calc(100% - var(--sideBar));    
+    height: 80px;
+    float: left;
+    margin-top: 40px;    
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .navbar_wrap {
+    width: 98%;
+    height: 80px;    
+}
+
+.navbar .navbar_wrap .text_wrap {    
+    float: left;
+    height: 100%;
+}
+
+.navbar .greeting {
+    letter-spacing: 7%;
+    color: #4D4D4D;    
+    margin: 10px 0;
+} 
+
+.navbar .instruction {
+    font-weight: lighter;
+    color: #4D4D4D88;
+    margin: 10px 0;
+} 
+
+.navbar .calendar {
+    width: 50px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #026064;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    float: right;
+    justify-content: center;
+}
+
+.navbar .actions {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: right;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #02606488;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        width: 100%;
+    }
+}

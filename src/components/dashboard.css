@@ -1,0 +1,30 @@
+.dashboard {    
+    width: calc(100% - var(--sideBar));
+    float: left;
+    background-color: aqua;    
+}
+
+.static_cards {
+    width: 25%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+.static_cards div {
+    background-color: yellow;
+    width: 90%;
+    height: 80%;
+}
+
+@media screen and (max-width: 700px) {
+    .static_cards {
+        width: 95%;        
+    }
+
+    .dashboard {
+        width: 100%;
+    }
+}

@@ -1,0 +1,11 @@
+.storage {    
+    float: left;
+    width: calc(100% - var(--sideBar));
+    transition: .3s ease-in-out;
+}
+
+@media screen and (max-width: 700px) {
+    .storage {
+        width: 100%;
+    }
+}

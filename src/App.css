@@ -1,38 +1,296 @@
-.App {
-  text-align: center;
+:root {
+  --sideBar: 100px;
+  --height: 1920px;
+  --coral: #FC8955;
+  --lochmara: #0583D2;
+  --malibu: #4FD6F7;
+  --french-pass: #B8E3FF;
+  --grey: #BCBCBC;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text_111111 {
+  color: #111111;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text_4D4D4D {
+  color: #4D4D4D;
+}
+
+.text_BCBCBC {
+  color: #BCBCBC;
+}
+
+.text_026064 {
+  color: #026064;  
+}
+
+.saled_products, .saled_clients {
+  width: 50%;
+  height: 640px;
+  float: left;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.saled_wrap {
+  width: 96%;
+  height: 96%;
+  background-color: #F6F6F6;
+}
+
+.saled_products .stuck {
+  width: 400px;
+}
+
+.saled_products .saled_header {
+  height: 70px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--grey);
+  overflow: hidden;
+}
+
+.types_number div {
+  margin: 0 5px;
+}
+
+.types_number {
+  display: flex;
+}
+
+.card_name,.types_number {
+  float: left;
+}
+
+.date_look,.get_report {
+  float: right;
+}
+
+.saled_header .card_name,.types_number,.date_look,.get_report {  
+  height: 20px;
+  margin: 25px;
+}
+
+.saled_products .saled_product {
+  height: 80px;
+  border-bottom: 1px solid #0001;  
+  font-size: 18px;
+  font-weight: 600;  
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  background-color: var(--lochmara);
+  color: var(--malibu);
+}
+
+.saled_products .saled_product:nth-child(odd) {
+  background-color: var(--malibu);
+  color: var(--lochmara);
+}
+
+.saled_product .product_stamp {
+  position: absolute;
+  bottom: -50px;
+  font-size: 100px;
+  color: #0003;
+}
+
+.saled_product .product_name,
+.saled_product .orders_number,
+.saled_product .product_amount,
+.saled_product .product_price {  
+  height: 20px;
+  margin: 25px;
+  float: left;
+  display: flex;  
+  margin-left: 10%;
+}
+
+.saled_product .product_name div,
+.saled_product .orders_number div,
+.saled_product .product_amount div,
+.saled_product .product_price div {
+  margin-left: 5px;
+}
+
+.saled_products .saled_header div {
+  white-space: nowrap;
+}
+
+.moved_products {
+  width: 35%;
+  height: 600px;
+  background-color: violet;
+  float: left;
+}
+
+.storage_card {
+  width: 65%;
+  height: 600px;
+  background-color: cadetblue;
+  float: left;
+}
+
+.product_board .board_wrap {
+  width: 98%;
+  max-height: 470px;
+  margin: 15px 0;
+  background-color: #F6F6F6;
+  overflow: hidden;
+  position: relative;
+  overflow-y: scroll;  
+}
+.product_board {  
+  width: 100%;  
+  overflow: hidden;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_board .categories {
+  width: 100%;
+  height: 80px;  
+  position: sticky;
+  background-color: var(--french-pass);
+  top: 0;
+  z-index: 2;
+}
+
+.product_board .categories .category div {
+  width: 180px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #026064;
+  position: relative;
+  overflow: hidden;
+}
+
+.product_board .categories .category span {
+  font-size: 18px;
+  color: white;  
+  font-weight: 600;
+  letter-spacing: 2px;  
+}
+
+.product_board .categories .category {
+  width: 200px;
+  height: 80px;
+  position: absolute;  
+  left: 0;
+  top: 0;  
+}
+
+.product_board .product {
+  width: 196px;
+  margin: 10px;  
+  height: 100px;
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #026064;  
+  font-size: 18px;
+  color: var(--french-pass);  
+  font-weight: 600;
+  letter-spacing: 2px;  
+  position: relative;  
+}
+
+.product_board .product_wrap {
+  padding: 10px;
+}
+
+.product_board .categories .category .product_mark {
+  position: absolute;
+  font-size: 60px;
+  font-weight: 900;
+  color: var(--malibu);
+}
+
+.product_board .product .product_mark {
+  position: absolute;    
+  top: -50px;
+  left: -20px;
+  font-size: 144px;
+  color: var(--malibu);
+}
+
+.product_board .product .product_name {  
+  white-space: nowrap;
+  margin: 10px 0 0 10px;
+  font-size: 24px;  
   color: white;
+  position: relative;
+  z-index: 1;
+}
+.product_board .product .product_price {    
+  white-space: nowrap;
+  text-align: center;
+  margin: 2px 0;
+  position: relative;
+  z-index: 1;
+}
+.product_board .product .product_amount {
+  text-align: center;  
+  position: relative;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 700px) {
+  .saled_products, .saled_clients, .moved_products, .storage_card {
+      width: 100%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 450px) {
+  .product_board .categories {
+    position: sticky;    
+    top: -5px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .saled_header .card_name,.types_number,.date_look,.get_report {  
+    height: 20px;
+    margin: 25px 10px;
+  }
+
+  .saled_products .saled_header {
+    display: flex;
+  }
+
+  .product_board .product_wrap {
+    padding: 0;
+  }
+
+  .product_board .product {
+    width: 50%;
+    height: 120px;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .product_board {
+    position: relative;
+    height: 550px;
+    overflow-y: scroll;
+  }
+
+  .saled_product .product_name,
+  .saled_product .orders_number,
+  .saled_product .product_amount,
+  .saled_product .product_price {
+    margin: 10px;
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
